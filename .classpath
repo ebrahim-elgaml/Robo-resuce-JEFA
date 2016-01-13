@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/xml-0.0.6.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/uncommons-maths-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/trove-0.1.8.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/resq-fire.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/rescuecore.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/junit-4.5.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/jts-1.11.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/jsi-1.0b2p1.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/jscience-4.3.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/jfreechart-1.0.13.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/jcommon-1.0.16.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/jaxen-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/dom4j.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/traffic3.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/standard.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/sample.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/resq-fire.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/rescuecore2.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/misc.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/maps.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/kernel.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/ignition.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/human.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/handy.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/gis2.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/collapse.jar"/>
+	<classpathentry kind="lib" path="/home/ebrahim/new jars and modules/jars/clear.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
