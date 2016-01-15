@@ -181,6 +181,7 @@ public class SamplePoliceForce extends AbstractSampleAgent<PoliceForce> {
     }
 
     // el block el msh b2dr a7ded el orintation bt3ha(momkn tkon intersection) btb2a critical.
+    // Get the blockades to check if they are critical or not.
     public ArrayList<Blockade> getAllCheckedBlockades(Area area, Blockade myBlockade){
     	ArrayList<Blockade> result = new ArrayList<Blockade>();
     	List<EntityID> ids = area.getBlockades();
@@ -211,7 +212,7 @@ public class SamplePoliceForce extends AbstractSampleAgent<PoliceForce> {
     	result.add(myBlockade);
 		return result;
     }
-    
+    // Chcek if a group of blockades are critical or not.
     public boolean isCriticalRangeLines(Area area, ArrayList<Blockade> myBlockades){
     	// [refBlockade, ........, Area]
     	ArrayList<BlockOfLines> blockOfLines = new ArrayList<BlockOfLines>();
@@ -254,6 +255,7 @@ public class SamplePoliceForce extends AbstractSampleAgent<PoliceForce> {
     	return isCriticalDistance(minDistance);
     }
     // NO Intersections
+    // avoid dealing with intersecting roads.
     public boolean validateRoute(Area a){
     	ArrayList<Edge> notPassableEdges = new ArrayList<Edge>();
     	for (Edge ee : a.getEdgesProperty().getValue()){
@@ -284,6 +286,7 @@ public class SamplePoliceForce extends AbstractSampleAgent<PoliceForce> {
     	}
     	return false;
     }
+    // get parallel edges of blockades with not passable edges in the road.
     public ArrayList<Line2D> getParallelEdges(Area a, Blockade myBlockade){
     	ArrayList<Line2D> result = new ArrayList<Line2D>();
     	if(validateRoute(a)){
@@ -320,7 +323,7 @@ public class SamplePoliceForce extends AbstractSampleAgent<PoliceForce> {
         }
         return (int)best;
     }
-    
+    // Get the nearest blockade to me from list of blockades.
 	 public Blockade getNearestBlockadeToMe(ArrayList<Blockade> myBlockades) {
 		 double x = me().getX();
 		 double y = me().getY();

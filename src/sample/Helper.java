@@ -16,6 +16,7 @@ import rescuecore2.misc.geometry.Vector2D;
 
 
 public class Helper {
+	// get the four vertices of a rectangle.
 	public static ArrayList<Point2D> getRectangleVertices(Rectangle r){
 		ArrayList<Point2D> result = new ArrayList<Point2D>();
 		result.add(new Point2D(r.x,r.y));
@@ -32,6 +33,7 @@ public class Helper {
 	 * p0---l0---p1
 	 * 
 	 */
+	// get the four edges of a rectangle.
 	public static ArrayList<Line2D> getRectangleLines(Rectangle r){
 		ArrayList<Point2D> points =getRectangleVertices(r);
 		ArrayList<Line2D> lines = new ArrayList<Line2D>();
@@ -41,6 +43,7 @@ public class Helper {
 		lines.add(new Line2D(points.get(3), points.get(0)));
 		return lines;
 	}
+	// get all parallel edges of rectangle to a certain line.
 	public static ArrayList<Line2D> getParralelLines(Rectangle r , Line2D l){
 		ArrayList<Line2D> result = new ArrayList<Line2D>();
 		ArrayList<Line2D> rectangleLines = getRectangleLines(r);
@@ -51,7 +54,7 @@ public class Helper {
 		}
 		return result;
 	}
-	
+	// get the minimum distance between two rectangles.
 	public static double getMinDistanceBetweenRectangles(Rectangle r1, Rectangle r2){
 		ArrayList<Line2D> lines1 = getRectangleLines(r1);
 		ArrayList<Line2D> lines2 = getRectangleLines(r2);
@@ -71,6 +74,7 @@ public class Helper {
 			return Math.abs(maxDistance);
 		}
 	}
+	// get minimum distance between rectangle and group of parallel lines.
 	public static double getMinDistanceRectanglesAndParallelLines(Rectangle r1, ArrayList<Line2D> lines2){
 		ArrayList<Line2D> lines1 = getRectangleLines(r1);
 		double maxDistance = -1;
@@ -89,6 +93,7 @@ public class Helper {
 			return Math.abs(maxDistance);
 		}
 	}
+	// get the minimum distance between two groups of parallel line.
 	public static double getMinDistanceBetweenParallelLines(ArrayList<Line2D> lines1, ArrayList<Line2D> lines2){
 		double maxDistance = -1;
 		for(Line2D l1 : lines1){
@@ -106,6 +111,7 @@ public class Helper {
 			return Math.abs(maxDistance);
 		}
 	}
+	// get the type of angle between two vectors.
 	public static AngleType angleToType(Vector2D v1, Vector2D v2){
 		if(v1.dot(v2) < 0)
 			return AngleType.OBTUSE;
@@ -118,8 +124,14 @@ public class Helper {
 //			return AngleType.ACUTE;
 //		}
 	}
-
-	
+	/*
+	 * |\
+	 * |Y\.
+	 * |  /     .
+	 * |X/
+	 * |/
+	 */
+	// Get X and Y angles.
 	public static Pair<AngleType, AngleType> pointWRTLine(Point2D p , Line2D l){
 		Line2D l1 = new Line2D(l.getOrigin(), p);
 		Line2D l2 = new Line2D(l.getEndPoint(), p);
